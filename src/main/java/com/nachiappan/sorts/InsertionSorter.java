@@ -4,11 +4,12 @@ public class InsertionSorter implements Sorter {
     public int[] sort(int[] input) {
         for (int i = 0; i < input.length; i++) {
             int numberToBeInserted = input[i];
-            int insertionIndex = getInsertionIndex(input, numberToBeInserted);
-            for (int j = i; j > insertionIndex; j--) {
-                input[j] = input[j-1];
+            int j = i;
+            while((j > 0) && (numberToBeInserted< input[j-1])){
+                input[j] = input[j - 1];
+                j--;
             }
-            input[insertionIndex] = numberToBeInserted;
+            input[j] = numberToBeInserted;
         }
         return input;
     }
