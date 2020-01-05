@@ -2,7 +2,7 @@ package com.nachiappan.sorts;
 
 import java.util.ArrayList;
 
-public class BubbleSorter {
+public class BubbleSorter implements Sorter {
     /*
     * Worst : O(n^2)
     * Best : O(n)
@@ -26,5 +26,5 @@ public class BubbleSorter {
         }
         return input;
     }
-
 }
+
