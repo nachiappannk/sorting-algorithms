@@ -11,6 +11,7 @@ public class BubbleSorter implements Sorter {
     * Memory O(1)
     * */
 
+    @Override
     public int[] sort(int[] input){
         for (int i = 0; i < input.length; i++) {
             boolean swapped = false;

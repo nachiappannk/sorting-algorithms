@@ -13,7 +13,8 @@ public class BubbleSorterTest {
     @Test
     @Parameters({
             "bubbleSort",
-            "insertionSort"
+            "insertionSort",
+            "selectionSort"
             })
     public void bubbleSortTests(String algorithmName){
 
@@ -27,6 +28,7 @@ public class BubbleSorterTest {
         switch (algorithmName){
             case "bubbleSort": return new BubbleSorter();
             case "insertionSort" : return new InsertionSorter();
+            case "selectionSort" : return new SelectionSorter();
             default:throw new Error("Unkown algorithm");
         }
     }

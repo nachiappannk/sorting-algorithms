@@ -1,6 +1,7 @@
 package com.nachiappan.sorts;
 
 public class InsertionSorter implements Sorter {
+    @Override
     public int[] sort(int[] input) {
         for (int i = 0; i < input.length; i++) {
             int numberToBeInserted = input[i];
@@ -12,12 +13,5 @@ public class InsertionSorter implements Sorter {
             input[j] = numberToBeInserted;
         }
         return input;
-    }
-
-    private int getInsertionIndex(int[] input, int element) {
-        for (int i = 0; i < input.length; i++) {
-            if(input[i] >= element) return i;
-        }
-        return input.length - 1;
     }
 }
