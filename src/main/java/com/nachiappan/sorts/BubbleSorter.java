@@ -3,6 +3,14 @@ package com.nachiappan.sorts;
 import java.util.ArrayList;
 
 public class BubbleSorter {
+    /*
+    * Worst : O(n^2)
+    * Best : O(n)
+    * Average : O(n^2)
+    *
+    * Memory O(1)
+    * */
+
     public int[] sort(int[] input){
         for (int i = 0; i < input.length; i++) {
             boolean swapped = false;
@@ -18,4 +26,5 @@ public class BubbleSorter {
         }
         return input;
     }
+
 }
